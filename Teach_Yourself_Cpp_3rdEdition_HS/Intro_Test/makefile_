@@ -1,0 +1,43 @@
+CXX      := -c++
+CXXFLAGS := -std=c++17 -pthread -pedantic-errors -Wall -Wextra -Werror 
+LDLIBS 	:= -L/usr/lib # -L is the path to the directories containing the libraries. A search path for libraries.
+LDFLAGS  := -lstdc++ -lm # -l is the name of the library you want to link to.
+BUILD    := build
+SRC		:= src
+INC		:= include
+OBJ_DIR  := $(BUILD)/objects
+APP_DIR  := $(BUILD)/apps
+TARGET   := program
+INCLUDE  := -I$(INC)/
+
+SRCS     := $(wildcard $(SRC)/*.cpp) 
+INCS		:= $(wildcard $(INC)/*.hpp)
+OBJS 		:= $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
+
+.PHONY: all build clean debug release 	# Define/Indicate '.PHONY' targets that are not files. The '.PHONY' rule keeps 
+													# 'make' from looking for or doing something with a file named 'all' 'release', etc. 
+													# For example, a name for the recipe - we call these "phony targets."
+all: build $(APP_DIR)/$(TARGET)
+
+# Break the compilation into 2 stages:
+$(OBJ_DIR)/%.o: %.cpp $(INCS) # Stage (1): with compilation and assembly happening first (output to object files), with check whether there has been any change in the source (.cpp) or header (.hpp) files.
+	@mkdir -p $(@D) # Take the directory component of the target (left of the ':'), and create that direcotry -'build/objects/src'
+	$(CXX) $(CXXFLAGS) $(INCLUDE) $(LDLIBS) $(LDFLAGS) -o $@ -c $<
+
+$(APP_DIR)/$(TARGET): $(OBJS) # Stage (2):  linking object files into a final executable or library afterward - this prevents having to recompile all object files when their source files haven't changed, thus the dependency on object files. 
+	@mkdir -p $(@D) # Take the directory component of the target (left of the ':'), and create that direcotry -'build/apps'
+	$(CXX) $(CXXFLAGS) $(INCLUDE) $(LDLIBS) $(LDFLAGS) -o $(APP_DIR)/$(TARGET) $(OBJS)
+
+build:
+	@mkdir -p $(APP_DIR)  # Create the directory '/build/app'
+	@mkdir -p $(OBJ_DIR)  # Create the directory '/build/objects'
+
+debug: CXXFLAGS += -DDEBUG -g3
+debug: all
+
+release: CXXFLAGS += -O3
+release: all
+
+clean:
+	-@rm -rvf $(OBJ_DIR)/*  # Delete the content of the directory '/build/objects', but not the directory (folder) itself
+	-@rm -rvf $(APP_DIR)/*  # Delete the content of the directory '/build/apps', but not the directory (folder) itself

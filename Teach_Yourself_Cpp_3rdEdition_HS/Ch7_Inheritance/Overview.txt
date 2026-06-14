@@ -1,0 +1,18 @@
+Ch.7 Inheritance
+	Chapter Objectives:
+	- 7.1 Base class access control
+	- 7.2 Using protected members
+	- 7.3 Constructors, destructors, and inheritance
+	- 7.4 Multiple inheretance
+	- 7.5 Virtual base classes
+
+You were introduced to the concept of inheritance earlier in this book. Now it is time to explore it more thoroughly. Inheritance
+is one of the three principles of OOP and, as such, it is an important feature of C++. Inheritance does more than just support the
+concept of hierarchical classification; in Chapter-10 you will learn how inheritance provides support for polymorphism, another
+principal feature of OOP.
+
+The topics covered in this chapter include:
+	- base class access control and the 'protected' access specifier
+	- inhereting multiple base classes
+	- passing arguments to base class constructors
+	- virtual base classes

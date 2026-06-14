@@ -1,0 +1,14 @@
+Ch.10 Virtual Functions
+	Chapter Objectives:
+	- 10.1 Pointers to derived classes
+	- 10.2 Introduction virtual functions
+	- 10.3 More about virtual functions
+	- 10.4 Applying polymorphism
+
+This chapter examines another important aspect of C++: the virtual function. What makes virtual functions important is that they
+are used to support run-time polymorphism. Polymorphism is supported by C++ in two ways. First, it is supported at compile time,
+through the use of overloaded operators and functions. Second, it is supported at run-time, through the use of virtual functions.
+As you will learn, run-time polymorphism provides the greatest flexibility.
+
+At the foundation of virtual functions and run-time polymorphism are pointers to derived classes. For this reason this chapter
+begins with a discussion of such pointers.

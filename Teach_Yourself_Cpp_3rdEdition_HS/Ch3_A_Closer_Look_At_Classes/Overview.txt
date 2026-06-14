@@ -1,0 +1,10 @@
+Ch.3 A Closer Look at Classes
+	Chapter Objectives:
+	- 3.1 Assigning objects
+	- 3.2 Passing objects to functions
+	- 3.3 Returning objects from functions
+	- 3.4 An Introduction to friend functions
+
+In this chapter you continue to explore the class. You will learn about assigning objects,
+passing objects to functions, and returning objects from functions. You will also learn about
+an important new type of function: the friend

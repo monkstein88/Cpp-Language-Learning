@@ -1,0 +1,12 @@
+Ch.6 Introducing Operator Overloading
+	Chapter Objectives:
+	- 6.1 The basics of operator overloading
+	- 6.2 Overloading binary operators
+	- 6.3 Overloading the relational and logical operators
+	- 6.4 Overloading a unary operator
+	- 6.5 Using friend operator functions
+	- 6.6 A closer look at the assignment operator
+	- 6.7 Overloading the [] subscript operator
+
+This chapter introduces another important C++ feature: operator overloading. This feature allows you to define the meaning of the
+C++ operators relative to classes that you define. By overloading operators, you can seamlessly add new data types to your program.

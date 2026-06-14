@@ -1,0 +1,32 @@
+Ch.8 Introducing the C++ I/O System
+	Chapter Objectives:
+	- 8.1 Some C++ I/O basics
+	- 8.2 Formatted I/O
+	- 8.3 Using width(), precision(), and fill()
+	- 8.4 Using I/O manipulators
+	- 8.5 Creating your own inserters
+	- 8.6 Creating extractors
+
+
+Although you have been using C++-style I/0 since the first chapter of this book, it is time to explore it more fully. Like its
+predecessor, C, the C++ language includes a rich I/O system that is both flexible and powerful. It is important to understand that
+C++ still supports the entire C I/O system. However, C++ supplies a complete set of object-oriented I/O routines. The major
+advantage of the C++ I/O system is that it can be overloaded relative to classes that you create. Put differently, the C++ I/O
+system allows you to seamlessly integrate new types that you create.
+
+Like the C I/O system, the C++ object-oriented I/O system makes little distinction between console and file I/O. File and console
+I/O are really just different perspectives on the same mechanism. The examples in this chapter use console I/O, but the
+information presented is applicable to file I/O as well. (File I/O is examined in detail in Chapter 9.)
+
+At the time of this writing, there are two versions of the I/O library in use: the older one that is based on the original
+specifications for C++ and the newer one defined bu the Standard C++. For the most part the two libraries appear the same to the
+programmer. This is because the new I/O library is, in essence, simply an updated and improved version of the old one. In fact,
+the vast majority of the differences between the two occur beneath the surface, in the way that the libraries are implemented -
+not in the way that they are used. From the programmer's perspective, the main difference is that the new I/O library contains a
+few additional features and defines some new data types. Thus, the new I/O library is essentially a superset of the old one.
+Nearly all programs originally written for the old library will compile without substantive changes when the new library is used.
+Since the old-style I/O library is now obsolete, this book describes only the new I/O library as defined by Standard C++. But
+most of the information is applicable to the old I/O library as well.
+
+This chapter covers several aspects of C++'s I/O system, including formatted I/O, I/O manipulators, and creating your own I/O
+inserters and extractors. As you will see, the C++ I/O system shares many features with the C I/O system.

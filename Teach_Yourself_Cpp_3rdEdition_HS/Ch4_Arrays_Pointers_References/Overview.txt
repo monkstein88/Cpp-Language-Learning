@@ -1,0 +1,15 @@
+Ch.4 Arrays, Pointers, and References
+	Chapter Objectives:
+	- 4.1 Arrays of objects
+	- 4.2 Using pointers to objects
+	- 4.3 The 'this' pointer
+	- 4.4 Using 'new' and 'delete'
+	- 4.5 More about 'new' and 'delete'
+	- 4.6 References
+	- 4.7 Passing references to objects
+	- 4.8 Returning references
+	- 4.9 Independent references and restrictions
+
+This chapter examines several important issues involving arrays of objects and pointers to
+objects. It concludes with a discussion of one of C++'s most important innovations: the
+reference. The reference is crucial to many C++ features, so a careful reading is advised.

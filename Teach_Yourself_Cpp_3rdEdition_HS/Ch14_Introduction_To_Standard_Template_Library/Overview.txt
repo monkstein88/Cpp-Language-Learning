@@ -1,0 +1,32 @@
+Ch.14 Introducing the Standard Template Library
+	Chapter Objectives:
+	- 14.1 An overview of the Standard Template Library
+	- 14.2 The container class
+	- 14.3 Vectors
+	- 14.4 Lists
+	- 14.5 Maps
+	- 14.6 Algorithms
+	- 14.7 The 'string' class
+
+Congratulations! If you have worked your way through the preceding chapters of this book, you can definitely call yourself a C++ programmer.
+In this, the final chapter of the book, we will explore one of C++'s most exciting-and most advanced-features: the Standard Template
+Library, or STL, was one of the major efforts that took place during the standartization of C++. The STL, was not part of the original
+specification for C++ but was added during the standartization proceedings (ref. to 1997). The STL provides general-purpose, templatized
+classes and functions that implement many popular and commonly used algorithms and data structures. For example, it includes support for
+vectors, lists, queues, and stacks. It also defines various routines that access them. Becasue the STL is constructed from template classes,
+the algorithms and data structures can be applied to nearly any type of data.
+
+It must be stated at the outset that the STL is a complex piece of software engineering that uses some of C++'s most sophisticated features.
+To understand and use the STL you must be comfortable with all of the material in the preceding chapters. Specifically, you must feel at
+home with templates. The template syntax that describes the STL can seem quite intimidating - although it looks more complicated than it
+actually is. While there is nothing in this chapter that is any more difficult than the material in the rest of this book, don't be
+surprised or dismayed if you find the STL confusing at first. Just be patient, study the examples, and don't let the unfamiliar syntax
+distract you from the STL's basic simplicty.
+
+The STL is a large library, and not all of its features can be described in this chapter. In fact, a full description of the STL and all of
+its features, nuances and programming techniques would fill a large book. The overview presented here is intended to familiarize you with
+its basic operation, design philosophy, and programming fundamentals. After working through this chapter you will be able to easily
+explore the remainder of the STL on your own.
+
+This chapter also describes one of C++'s most important new classes: 'string'. The 'string' class defines a string data type that allows
+you to work with character strings much as you do with other data types, using operators.

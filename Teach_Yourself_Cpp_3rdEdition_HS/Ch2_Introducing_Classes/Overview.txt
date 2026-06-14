@@ -1,0 +1,9 @@
+Ch.2 Introducing Classes
+	Chapter Objectives:
+	- 2.1 Constructor and destructor functions
+	- 2.2 Constructors that take parameters
+	- 2.3 Introducing inheritance
+	- 2.4 Object pointers
+	- 2.5 Classes, structures, and unions are related
+	- 2.6 In-line functions
+	- 2.7 Automatic in-lining

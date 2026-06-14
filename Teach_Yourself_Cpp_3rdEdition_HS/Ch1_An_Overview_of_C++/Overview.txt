@@ -1,0 +1,52 @@
+Ch.1 An Overview of C++
+	Chapter Objectives:
+	- 1.1 What is Object-Oriented Programming
+	- 1.2 Two versions of C++
+	- 1.3 C++ console I/O
+	- 1.4 C++ comments
+	- 1.5 Classes: A first look
+	- 1.6 Some differences between C and C++
+	- 1.7 Introducing function overloading
+	- 1.8 C++ keywords
+
+	C++ is enhanced version of the C language. C++ includes everything that is part of C and adds support for object-oriented programming (OOP
+	for short). In addition, C++ contains many improvements and features that simply make it a "better C", independent of object-oriented
+	programming. With very few, very minor exceptions, C++ is a superset of C. While everything that you know about the C language is fully
+	applicable to C++, understanding its enhanced features will still require a significant investment of time and effort on your part. However,
+	the rewards of programming in C++ will more than justify the effort you put forth.
+
+	The purpose of this chapter is to introduce you to several of the most important features of C++. As you know, the elements of a computer
+	language do not exist in a void, separate from one another. Instead, they work together to form the complete language. This interrelatedness
+	is especially pronounced in C++. In fact, it is difficult to discuss one aspect of C++ in isolation because the features of C++ are highly
+	integrated. To help overcome this problem , this chapter provides a brief overview of several C++ features. This overview will enable you
+	to understand the examples discussed later in this book. Keep in mind that most topics will be more thoroughly explored in later chapters.
+
+	Since C++ was invented to support object-oriented programming, this chapter begins with a description of OOP. As you will see, many features
+	of C++ are related to OOP in one way or another. In fact, the theory of OOP permeates C++. However, it is important to understand that C++
+	can be used to write programs that are and are 'not' object oriented. How you use C++ is completely up to you.
+
+	At the time of this writing (around 1997, so some of the information might be old or not make sense if you read it from present times), the
+	standardization of C++ is being finalized. For this reason, this chapter describes some important differences between versions of C++ that
+	have been in common use during the past several years and the new Standard C++. Since this book teaches Standard C++, this material is
+	especially important if you are using an older compiler.
+
+	In addition to introducing several important C++ features, this chapter also discusses some differences between C and C++ programming
+	styles. There are several aspects of C++ that allow greater flexibility in the way that you write programs. While some of these features
+	have little or nothing to do with object-oriented programming, they are found in most C++ programs, so it is appropriate to discuss them
+	early in this book.
+
+	Before you begin, a few general comments about the nature and form of C++ are in order.
+
+	First, for the most part , C++ programs physically look like C programs. Like a C program, a C++ program begins execution at 'main()'. To
+	include command-line arguments, C++ uses the same 'argc', 'argv' convention that C uses. Although C++ defines its own, object-oriented
+	library, it also supports all the functions in the C standard library. C++ uses the same control structures as C. C++ includes all of the
+	built-in data types defined by C.
+
+	This book assumes that you already know the C programming language. In other words, you must be able to program in C before you can learn to
+	program in C++ by using this book. If you don't know C, a good starting place is the book "Teach Yourself C, Third Edition
+	(Berkeley:Osborne-Hill, 1997)". It applies the same systematic approach used in this book thoroughly covers the entire C language.
+
+	Note: This bok assumes that you know how to compile and execute a program using your C++ compiler. If you don't, you will need to refer to
+	your compiler's instructions. (Because of differences between compilers, it is impossible to give compilation instructions for each in
+	this book.) Since programming is a beast learned by doing, you are strongly urged to enter, compile and run the examples in the book in the
+	order in which they are presented.

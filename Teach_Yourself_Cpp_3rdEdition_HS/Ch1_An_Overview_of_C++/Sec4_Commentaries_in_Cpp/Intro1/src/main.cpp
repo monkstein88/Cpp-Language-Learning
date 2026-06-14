@@ -1,0 +1,16 @@
+
+/*
+	Intro 1.: In C++, you can include comments in your program two different ways. First, you can use the standard, C-like comment mechanism.
+	That is, begin a comment with /* ...
+	and end it with
+	... */
+
+/*
+	As with C, this type of comment cannot be nested in C++.
+
+	The second way that you can add a remark to your C++ program is to use the 'single-line comment'. A single-line comment begins with a //
+	and stops at the end of the line. Other than the physical end of the line (that is, a carriage-return/linefeed combination), a
+	single-line comment uses no comment terminator symbol.
+
+	Typically, C++ programmers use C-like comments for multiline commentaries and reserve C++-style single-line comments for short remarks.
+*/

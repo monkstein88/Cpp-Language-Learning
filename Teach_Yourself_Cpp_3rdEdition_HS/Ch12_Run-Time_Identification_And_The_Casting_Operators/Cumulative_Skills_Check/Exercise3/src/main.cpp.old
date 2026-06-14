@@ -1,0 +1,190 @@
+/*
+	Exercise 3.: Special Challenge: On your own, create a class hierarchy that has at its top an abstract class called 'DataStruct'. Create
+	two concrete subclasses. Have one implement a stack, the other a queue. Create a function called 'DataStructFactory' that has this
+	prototype.
+
+	DataStruct *DataStructFactotry(char what);
+
+	Have 'DataStructFactory()' create a stack if 'what' is 's' and a queue if 'what' is 'q'. Return a pointer to the object created.
+	Demonstrate that your factory function works.
+*/
+
+#include <iostream>
+#include <new>			// for the 'new' operator exceptions
+#include <typeinfo> // for 'typeid()', 'type_info' and so on.
+#include <cctype>   // for 'tolower()' , 'toupper()'
+#include <cstdlib> // holding the definitions for EXIT_SUCCESS and EXIT_FAILURE and the exit() function
+using namespace std;
+
+#define DATA_SIZE (10) // This will determine the 'stack' or 'queue' maximum size
+
+template <class T>
+class DataStruct{
+protected:
+	T* p;
+public:
+
+	DataStruct(char what){
+		try{
+			p = new T (DATA_SIZE);
+		}
+		catch(bad_alloc&){ // Catch the 'new' exceptions by (constant) reference ('catch(bad_alloc&)'), and not by a value ('catch(bad_alloc)')
+			cout << "Error - cannot allocate memory for ";
+
+			if(tolower(what) == 's' )
+				cout << "stack!" << endl;
+			else if(tolower(what) == 'q' )
+				cout << "queue!" << endl;
+			else
+				cout << "unknown!" << endl;
+
+			exit(EXIT_FAILURE);
+		}
+		catch(...){ // Catch any other exception that is not of 'bad_alloc' nature
+			cout << "Error - other/unknown" << endl;
+			exit(EXIT_FAILURE);
+		}
+	}
+	~DataStruct(){ delete [] p; }
+};
+
+//=====================
+//	Stack type
+//=====================
+template <class T>
+class DataStack : public DataStruct<T>{
+protected:
+	int tos;
+public:
+	DataStack() : DataStruct<T>('s') {tos = 0;}
+	void init(){ tos = 0; } // have an explicit way initialize stack
+	void push(DataStack ch); // push object on stack
+	DataStack pop(); // pop object from stack
+};
+
+//=====================
+//	Queue type
+//=====================
+template <class T>
+class DataQueue : public DataStruct<T>{
+protected:
+	int head; // this index holds the start of the queue
+	int tail; // this index holds the end of the queue
+public:
+	DataQueue() : DataStruct<T>('q') { tail = head = 0; }
+	void init() { tail = head = 0; } // have an explicit way initialize stack
+	void enqueue(T val);
+	T dequeue();
+};
+
+//====================
+// Object factory
+//====================
+template <typename T>
+T* DataStructFactory(){
+
+
+	return NULL;
+}
+
+
+
+
+
+// Push an object
+template <class T>
+void stack<StackType>::push(StackType ch){
+
+	if(tos==DATA_SIZE){
+		cout << "Stack is full.\n";
+		return;
+	}
+
+	stck[tos] = ch;
+	tos++;
+}
+
+// Pop an object
+template <class StackType>
+StackType stack<StackType>::pop(){
+
+	if(tos == 0){
+		cout << "Stack is empty.\n";
+		return 0; // return null on empty stack
+	}
+
+	tos--;
+	return stck[tos];
+}
+
+
+template <class T>
+class DataQueue : public DataStruct<T>{
+protected:
+	int head; // this index holds the start of the queue
+	int tail; // thi index holds the end of the queue
+public:
+	queue();
+	~queue();
+	void enqueue(q_type val);
+	q_type dequeue();
+};
+
+
+template <class q_type>
+queue<q_type>::queue(){
+
+	q_ptr = new q_type [100];
+	if(!q_ptr){
+		cout << "Queue allocation error!\n";
+		exit(EXIT_FAILURE);
+	}
+	head = tail = 0;
+}
+
+template <class q_type>
+queue<q_type>::~queue(){
+
+	cout << "Deallocating queue.\n";
+	delete [] q_ptr;
+}
+
+// Put a value in the queue
+template <class q_type>
+void queue<q_type>::enqueue(q_type val){
+
+	if((tail+1 == head) ||( (head==0) && (tail+1 == Q_SIZE)) ){
+		cout << "Cannot enqueue - queue is full!\n";
+		return;
+	}
+	tail++;
+	if(tail == Q_SIZE) tail = 0; // roll around the queue
+	q_ptr[tail] = val;
+}
+
+// Extract a value from the queue
+template <class q_type>
+q_type queue<q_type>::dequeue(){
+
+	if( head == tail ){
+		cout << "Cannot enqueue - queue is empty!\n";
+		return EXIT_FAILURE; // signal an error here
+	}
+	head++;
+	if(head == Q_SIZE) head = 0; // roll around the queue
+	return q_ptr[head];
+}
+
+
+
+int main(){
+
+
+	return EXIT_SUCCESS;
+}
+
+
+/*
+	This program displays the following when ran:
+
+*/

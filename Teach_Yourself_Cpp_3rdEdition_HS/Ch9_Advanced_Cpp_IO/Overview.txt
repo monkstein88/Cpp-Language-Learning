@@ -1,0 +1,17 @@
+Ch.9 Advanced C++ I/O
+	Chapter Objectives:
+	- 9.1 Creating your own manipulators
+	- 9.2 File I/O basics
+	- 9.3 Unformatted, binary I/O
+	- 9.4 More unformatted I/O functions
+	- 9.5 Random access
+	- 9.6 Checking the I/O status
+	- 9.7 Customized I/O and files
+
+This chapter continues the examination of the C++ I/O system. In it you will learn to create your own I/O manipulators and work
+with files. Keep in mind that the C++ I/O system is both rich and flexible and contains many features. While it is beyond the scope
+of this book to include all of those features, the most important ones are discussed here. A complete description of the C++ I/O
+system can be found in my book "C++: The complete Reference (Berkeley: Osborne/McGraw-Hill)".
+
+Note: The C++ I/O system described in this chapter reflects the one defined by Standard C++ and is compatible with all major C++
+compilers. If you have an older or conforming compiler, its I/O system will not have all the capabilities described here.

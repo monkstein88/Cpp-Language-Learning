@@ -1,0 +1,22 @@
+Ch.11 Templates and Exception Handling
+	Chapter Objectives:
+	- 11.1 Generic functions
+	- 11.2 Generic classes
+	- 11.3 Exception handling
+	- 11.4 More about exception handling
+	- 11.5 Handling exceptions thrown by 'new'
+
+This chapter discusses two of C++'s  most important high-level features: 'templates' and 'exception handling'. While neither was part of
+the original specification for C++, both were added several years ago and are defined by Standard C++ (ref. to 1997). They are supported by
+all modern compilers. These two features help you achieve two of the most elusive goals in programming: the creation of reusable and
+resilient code.
+
+Using templates, it is possible to create generic functions and classes. In a generic function or class, the type of data that is
+operated upon, is specified as a parameter. This allows you to use one function or class with several different types of data without having
+to explicitly recode a specific version for each different data type. Thus, templates allow you to create reusable code. Both generic
+functions and generic classes are discussed here.
+
+Exception handling is the subsystem of C++ that allows you to handle errors that occur at run time in a structured and controlled manner.
+With C++ exception handling, your program can automatically invoke an error handling routine when an error occurs. The principal advantage
+of exception handling is that it automates much of the error handling code that previously had to be coded "by hand" in any large program.
+The proper use of exception handling helps you create resilient code.

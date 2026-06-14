@@ -1,0 +1,10 @@
+Ch.12 Run-Time Type Identification and Casting Operators
+	Chapter Objectives:
+	- 12.1 Understanding Run-Time Type Identification (RTTI)
+	- 12.2 Using 'dynamic_cast'
+	- 12.3 Using 'const_cast', 'reinterpret_cast', 'static_cast'
+
+This chapter discusses two features that were recently added to the C++ language: run-time type Identification (RTTI for short) and the new
+casting operators. RTTI allows you to identify the type of an object during the execution of your program. The casting operators give you
+safer, more controlled ways to cast. As you will see, one of the casting operators, 'dynamic_cast', relates directly to RTTI, so it makes
+sense to discuss these two subjects in the same chapter.

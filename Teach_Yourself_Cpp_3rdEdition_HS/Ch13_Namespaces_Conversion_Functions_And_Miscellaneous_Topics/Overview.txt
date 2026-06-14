@@ -1,0 +1,12 @@
+Ch.13 Namespaces, Conversion Functions, and Miscellaneous Topics
+	Chapter Objectives:
+	- 13.1 Namespaces
+	- 13.2 Creating a conversion function
+	- 13.3 'static' class members
+	- 13.4 'const' member functions and 'mutable'
+	- 13.5 A final look at constructors
+	- 13.6 Using linkage specifiers and the 'asm' keyword
+	- 13.7 Array-based I/O
+
+
+This chapter discusses namespaces, conversion functions, static and const class members, and other specialized features of C++.

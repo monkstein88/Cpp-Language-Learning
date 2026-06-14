@@ -1,0 +1,13 @@
+Ch.5 Function Overloading
+	Chapter Objectives:
+	- 5.1 Overloading constructor functions
+	- 5.2 Creating and using a copy constructor
+	- 5.3 The 'overload' anachronism
+	- 5.4 Using default arguments
+	- 5.5 Overloading and ambiguity
+	- 5.6 Finding the address of an overloaded function
+
+In this chapter you will learn more about overloading functions. Although this topic was introduced early in
+this book, there are several further aspects of it that need to be covered. Among the topics included are how
+to overload constructor functions, how to create a copy constructor, how to give functions default arguments,
+and how to avoid ambiguity when overloading.
